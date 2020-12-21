@@ -32,7 +32,19 @@ class RegisterForm extends Form
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter your full name',
+                            'placeholder' => 'Enter your name',
+                        ]
+                    ]
+                ],
+                'user_surname' => [
+                    'label' => 'Surname',
+                    'type' => 'text',
+                    'validators' => [
+                        'validate_field_not_empty',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Enter your surname',
                         ]
                     ]
                 ],
@@ -57,6 +69,30 @@ class RegisterForm extends Form
                     'extra' => [
                         'attr' => [
                             'placeholder' => 'Repeat password',
+                        ]
+                    ]
+                ],
+                'phonenumber' => [
+                    'label' => 'Phonenumber',
+                    'type' => 'number',
+                    'validators' => [
+//                        'validate_field_not_empty',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => '86 XXX XXXX',
+                        ]
+                    ]
+                ],
+                'address' => [
+                    'label' => 'Address',
+                    'type' => 'text',
+                    'validators' => [
+//                        'validate_field_not_empty',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Enter your address',
                         ]
                     ]
                 ],

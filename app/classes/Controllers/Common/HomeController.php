@@ -51,7 +51,7 @@ class HomeController
                 ];
             }
 
-            $heading = "Zdarova, {$user['user_name']}";
+            $heading = "Oppa, čia juk {$user['user_name']} {$user['user_surname']}, pagaliau sugrįžai.";
             $links = [
                 'login' => (new Link([
                     'url' => App::$router::getUrl('logout'),
@@ -63,13 +63,13 @@ class HomeController
             $links = [
                 'login' => (new Link([
                     'url' => App::$router::getUrl('login'),
-                    'text' => 'Login'
+                    'text' => 'Norite parašyti komentarą? Užsiregistruokite'
                 ]))->render()
             ];
         }
 
         $content = (new View([
-            'title' => 'Welcome to our pizzaria',
+            'title' => 'SPORTO KLUBAS',
             'heading' => $heading,
             'forms' => $forms ?? [],
             'links' => $links ?? []

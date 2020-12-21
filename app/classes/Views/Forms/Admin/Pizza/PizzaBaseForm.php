@@ -11,18 +11,18 @@ class PizzaBaseForm extends Form
     public function __construct() {
         parent::__construct([
             'fields' => [
-//                'name' => [
-//                    'label' => 'PIZZA NAME',
-//                    'type' => 'text',
-//                    'validators' => [
-//                        'validate_field_not_empty',
-//                    ],
-//                    'extra' => [
-//                        'attr' => [
-//                            'placeholder' => 'Enter item\'s name',
-//                        ],
-//                    ],
-//                ],
+                'name' => [
+                    'label' => 'Comment here',
+                    'type' => 'textarea',
+                    'validators' => [
+                        'validate_field_not_empty',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Write your comment',
+                        ],
+                    ],
+                ],
 //                'price' => [
 //                    'label' => 'PRICE',
 //                    'type' => 'text',
@@ -40,18 +40,18 @@ class PizzaBaseForm extends Form
 //                        ],
 //                    ],
 //                ],
-                'image' => [
-                    'label' => 'IMAGE URL',
-                    'type' => 'textarea',
-                    'validators' => [
-                        'validate_field_not_empty',
-                    ],
-                    'extra' => [
-                        'attr' => [
-                            'placeholder' => 'Enter pizzas image URL',
-                        ],
-                    ],
-                ],
+//                'image' => [
+//                    'label' => 'Comment section',
+//                    'type' => 'textarea',
+//                    'validators' => [
+//                        'validate_field_not_empty',
+//                    ],
+//                    'extra' => [
+//                        'attr' => [
+//                            'placeholder' => 'Write your short comment',
+//                        ],
+//                    ],
+//                ],
             ],
             // No buttons since they will be defined in Extends
         ]);

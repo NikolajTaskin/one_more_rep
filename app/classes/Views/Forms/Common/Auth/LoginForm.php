@@ -11,7 +11,7 @@ public function __construct()
     parent::__construct([
         'fields' => [
             'email' => [
-                'label' => 'El. paštas',
+                'label' => 'El. paštas <span style="color: red">*</span>',
                 'type' => 'text',
                 'validators' => [
                     'validate_field_not_empty',
@@ -25,7 +25,7 @@ public function __construct()
                 ],
             ],
             'password' => [
-                'label' => 'Slaptažodis',
+                'label' => 'Slaptažodis <span style="color: red">*</span>',
                 'type' => 'password',
                 'validators' => [
                     'validate_field_not_empty',

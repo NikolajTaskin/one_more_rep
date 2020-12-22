@@ -72,9 +72,9 @@ class OrdersApiController extends AdminController
                 'status' => $row['status'],
                 'name' => $pizza['name'],
                 'timestamp' => $this->timeFormat($row),
-                'buttons' => [
-                    'edit' => 'Edit'
-                ]
+//                'buttons' => [
+//                    'edit' => 'Edit'
+//                ]
             ];
         }
 

@@ -21,8 +21,6 @@ class PizzaApiController extends AdminController
         if ($form->validate()) {
             $pizza = $form->values();
             $pizza['id'] = App::$db->insertRow('pizzas', $form->values());
-            $pizza['buttons']['delete'] = 'Delete';
-            $pizza['buttons']['edit'] = 'Edit';
             $response->setData($pizza);
         } else {
             $response->setErrors($form->getErrors());

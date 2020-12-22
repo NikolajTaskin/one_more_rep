@@ -16,6 +16,7 @@ public function __construct()
                 'validators' => [
                     'validate_field_not_empty',
                     'validate_email',
+                    'validate_user_exist',
                 ],
                 'extra' => [
                     'attr' => [

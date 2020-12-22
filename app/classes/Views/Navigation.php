@@ -32,6 +32,7 @@ class Navigation extends View
             }
         } else {
             return $nav + [
+                    App::$router::getUrl('admin_orders') => 'Titulinis',
                     App::$router::getUrl('register') => 'Registruotis',
                     App::$router::getUrl('login') => 'Prisijungti',
                 ];

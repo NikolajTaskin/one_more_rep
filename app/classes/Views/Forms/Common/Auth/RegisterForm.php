@@ -11,7 +11,7 @@ class RegisterForm extends Form
         parent::__construct([
             'fields' => [
                 'email' => [
-                    'label' => 'Email',
+                    'label' => 'El. paštas <span style="color: red">*</span>',
                     'type' => 'text',
                     'validators' => [
                         'validate_field_not_empty',
@@ -20,63 +20,69 @@ class RegisterForm extends Form
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter email',
+                            'placeholder' => 'pvz.: mail@mail.lt',
                         ]
                     ]
                 ],
                 'user_name' => [
-                    'label' => 'Name',
+                    'label' => 'Vardas <span style="color: red">*</span>',
                     'type' => 'text',
                     'validators' => [
                         'validate_field_not_empty',
+                        'validate_real_name',
+                        'validate_short_name',
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter your name',
+                            'placeholder' => 'Vardas',
                         ]
                     ]
                 ],
                 'user_surname' => [
-                    'label' => 'Surname',
+                    'label' => 'Pavardė <span style="color: red">*</span>',
                     'type' => 'text',
                     'validators' => [
                         'validate_field_not_empty',
+                        'validate_real_name',
+                        'validate_short_name',
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter your surname',
+                            'placeholder' => 'Pavardė',
                         ]
                     ]
                 ],
                 'password' => [
-                    'label' => 'Password',
+                    'label' => 'Slaptažodis <span style="color: red">*</span>',
                     'type' => 'password',
                     'validators' => [
                         'validate_field_not_empty',
+                        'validate_strong_password'
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter password',
+                            'placeholder' => 'pvz.: Sl*pT*Ž0d1sss',
                          ]
                     ]
                 ],
                 'password_repeat' => [
-                    'label' => 'Password Repeat',
+                    'label' => 'Pakartoti slaptažodį <span style="color: red">*</span>',
                     'type' => 'password',
                     'validators' => [
                         'validate_field_not_empty',
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Repeat password',
+                            'placeholder' => 'Pakartok slaptažodį',
                         ]
                     ]
                 ],
                 'phonenumber' => [
-                    'label' => 'Phonenumber',
-                    'type' => 'number',
+                    'label' => 'Telefono numeris',
+                    'type' => 'text',
                     'validators' => [
-//                        'validate_field_not_empty',
+                        'validate_numeric',
+                        'validate_phone_number'
                     ],
                     'extra' => [
                         'attr' => [
@@ -85,21 +91,21 @@ class RegisterForm extends Form
                     ]
                 ],
                 'address' => [
-                    'label' => 'Address',
+                    'label' => 'Gyvenamoji vieta',
                     'type' => 'text',
                     'validators' => [
 //                        'validate_field_not_empty',
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter your address',
+                            'placeholder' => 'Gatvė, namo/buto nr., miestas',
                         ]
                     ]
                 ],
             ],
             'buttons' => [
                 'register' => [
-                    'title' => 'Register',
+                    'title' => 'Prisiregistruoti',
                 ]
             ],
             'validators' => [

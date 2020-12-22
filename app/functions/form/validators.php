@@ -16,7 +16,7 @@ use App\App;
 function validate_user_unique(string $field_input, array &$field): bool
 {
     if (App::$db->getRowWhere('users', ['email' => $field_input])) {
-        $field['error'] = 'User already exists';
+        $field['error'] = 'Toks vartotojas jau užregistruotas';
 
         return false;
     }
@@ -45,7 +45,7 @@ function validate_login(array $filtered_input, array &$form): bool
         return true;
     }
 
-    $form['error'] = 'Incorrect';
+    $form['error'] = 'Neteisinga';
 
     return false;
 }

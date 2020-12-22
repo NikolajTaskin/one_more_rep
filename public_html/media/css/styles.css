@@ -29,6 +29,7 @@ h1, h2, h3, h4 {
 
 main {
     margin-bottom: 50px;
+    min-height: 85vh;
 }
 
 .title {
@@ -118,13 +119,15 @@ button:hover {
 ########################*/
 
 nav {
+    height: 70px;
     display: flex;
     justify-content: center;
     background-image: linear-gradient(to right top, #0e2d06, #1b380d, #294312, #384e18, #47591d);
-    width: 100vw;
+    width: 800px;
     padding: 20px;
     font-family: 'Bangers', cursive;
     font-size: 40px;
+    margin-bottom: 0;
 }
 
 ul {
@@ -176,15 +179,85 @@ a:hover {
     padding: 5px;
 }
 
-/*#pizza-grid-container img {*/
-/*    width: 250px;*/
-/*    height: 250px;*/
-/*    object-fit: cover;*/
-/*    transition: 0.5s ease-in-out;*/
-/*    border-radius: 100%;*/
-/*    margin: 15px;*/
-/*}*/
-
 #pizza-grid-container img:hover {
     transform: scale(1.1);
+}
+
+/*######################
+##  Main Page
+########################*/
+.img-top img {
+    filter: hue-rotate(-7deg);
+    /*background-size: cover;*/
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 0;
+}
+
+.services {
+    padding: 20px 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.coaches {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*.services .coaches {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*    margin: 0 auto;*/
+/*    max-width: 800px;*/
+/*}*/
+
+.coach {
+    box-sizing: border-box;
+    border: 1px solid #c6c6c6;
+    margin-bottom: 20px;
+    height: 380px;
+}
+
+.coach .coach-img-container {
+    height: 40%;
+}
+
+.coach .coach-info-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 60%;
+}
+
+.coach h2 {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0 10px;
+}
+
+.coach p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.coach .coach-img-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.map {
+    height: 300px;
+    width: 100%;
+}
+
+.map iframe {
+    border: none;
+    width: 100%;
+    height: 300px;
 }

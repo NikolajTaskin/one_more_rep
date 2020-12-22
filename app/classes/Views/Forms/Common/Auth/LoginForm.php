@@ -11,7 +11,7 @@ public function __construct()
     parent::__construct([
         'fields' => [
             'email' => [
-                'label' => 'Email',
+                'label' => 'El. paštas',
                 'type' => 'text',
                 'validators' => [
                     'validate_field_not_empty',
@@ -19,12 +19,12 @@ public function __construct()
                 ],
                 'extra' => [
                     'attr' => [
-                        'placeholder' => 'Įvesk emailą',
+                        'placeholder' => 'Įvesk el. paštą',
                     ],
                 ],
             ],
             'password' => [
-                'label' => 'Password',
+                'label' => 'Slaptažodis',
                 'type' => 'password',
                 'validators' => [
                     'validate_field_not_empty',
@@ -38,7 +38,7 @@ public function __construct()
         ],
         'buttons' => [
             'login' => [
-                'title' => 'Login',
+                'title' => 'PRISIJUNGTI',
             ],
         ],
         'validators' => [

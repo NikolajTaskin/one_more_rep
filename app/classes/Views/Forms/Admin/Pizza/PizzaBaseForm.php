@@ -12,46 +12,18 @@ class PizzaBaseForm extends Form
         parent::__construct([
             'fields' => [
                 'name' => [
-                    'label' => 'Comment here',
+                    'label' => 'Komentuok <span style="color: red">*</span>',
                     'type' => 'textarea',
                     'validators' => [
                         'validate_field_not_empty',
+                        'validate_comments_length'
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Write your comment',
+                            'placeholder' => 'Parašyk trumpą atsiliepimą...',
                         ],
                     ],
                 ],
-//                'price' => [
-//                    'label' => 'PRICE',
-//                    'type' => 'text',
-//                    'validators' => [
-//                        'validate_field_not_empty',
-//                        'validate_numeric',
-//                        'validate_field_range' => [
-//                            'min' => 1,
-//                            'max' => 9999,
-//                        ]
-//                    ],
-//                    'extra' => [
-//                        'attr' => [
-//                            'placeholder' => 'Enter pizzas price',
-//                        ],
-//                    ],
-//                ],
-//                'image' => [
-//                    'label' => 'Comment section',
-//                    'type' => 'textarea',
-//                    'validators' => [
-//                        'validate_field_not_empty',
-//                    ],
-//                    'extra' => [
-//                        'attr' => [
-//                            'placeholder' => 'Write your short comment',
-//                        ],
-//                    ],
-//                ],
             ],
             // No buttons since they will be defined in Extends
         ]);

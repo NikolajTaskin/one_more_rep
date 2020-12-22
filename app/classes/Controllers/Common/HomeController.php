@@ -28,7 +28,7 @@ class HomeController
     public function __construct()
     {
         $this->page = new BasePage([
-            'title' => 'Pizzas',
+            'title' => 'Komentarai',
             'js' => ['/media/js/home.js']
         ]);
     }
@@ -55,7 +55,7 @@ class HomeController
             $links = [
                 'login' => (new Link([
                     'url' => App::$router::getUrl('logout'),
-                    'text' => 'Logout'
+                    'text' => 'Atsijungti'
                 ]))->render()
             ];
         } else {

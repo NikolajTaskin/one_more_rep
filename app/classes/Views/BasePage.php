@@ -2,6 +2,7 @@
 
 namespace App\Views;
 
+use Core\View;
 use Core\Views\Page;
 
 class BasePage extends Page
@@ -43,4 +44,5 @@ class BasePage extends Page
     {
         $this->data['content'] = $content;
     }
+
 }

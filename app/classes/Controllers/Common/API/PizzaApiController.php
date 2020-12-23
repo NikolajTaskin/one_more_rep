@@ -18,17 +18,17 @@ class PizzaApiController
         $response = new Response();
 
         $role = App::$session->getUser() ? App::$session->getUser()['role'] : null;
-        $pizzas = App::$db->getRowsWhere('pizzas');
+        $comments = App::$db->getRowsWhere('comments');
 
-        foreach ($pizzas as $row_id => &$pizza) {
+        foreach ($comments as $row_id => &$comment) {
             // We must add this, so JS can assign the id
-            $pizza['id'] = $row_id;
+            $comment['id'] = $row_id;
 
 
         }
 
         // Setting "what" to json-encode
-        $response->setData($pizzas);
+        $response->setData($comments);
 
         // Returns json-encoded response
         return $response->toJson();

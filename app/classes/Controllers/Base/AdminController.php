@@ -6,7 +6,7 @@ use App\App;
 
 class AdminController
 {
-    protected string $redirect =  '/login';
+    protected string $redirect =  '/admin/orders';
 
     public function __construct()
     {

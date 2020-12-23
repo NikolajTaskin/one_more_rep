@@ -43,14 +43,13 @@ main {
     margin: 50px;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-tr, td, th {
-    margin: 10px;
-    padding: 10px;
+footer {
+    height: 70px;
+    background-image: linear-gradient(to right top, #0e2d06, #1b380d, #294312, #384e18, #47591d);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

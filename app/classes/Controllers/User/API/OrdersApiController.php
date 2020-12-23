@@ -66,12 +66,12 @@ class OrdersApiController extends UserController
     private function buildRows($orders)
     {
         foreach ($orders as $id => &$row) {
-            $pizza = App::$db->getRowById('pizzas', $row['pizza_id']);
+            $comment = App::$db->getRowById('comments', $row['pizza_id']);
 
             $row = [
                 'id' => $id,
                 'status' => $row['status'],
-                'name' => $pizza['name'],
+                'name' => $comment['name'],
                 'timestamp' => $this->timeFormat($row)
             ];
         }

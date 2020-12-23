@@ -65,16 +65,13 @@ class OrdersApiController extends AdminController
     private function buildRows($orders)
     {
         foreach ($orders as $id => &$row) {
-            $pizza = App::$db->getRowById('pizzas', $row['pizza_id']);
+            $comment = App::$db->getRowById('comments', $row['pizza_id']);
 
             $row = [
                 'id' => $id,
                 'status' => $row['status'],
-                'name' => $pizza['name'],
+                'name' => $comment['name'],
                 'timestamp' => $this->timeFormat($row),
-//                'buttons' => [
-//                    'edit' => 'Edit'
-//                ]
             ];
         }
 
@@ -113,12 +110,12 @@ class OrdersApiController extends AdminController
      */
     private function buildRow($row, $id): array
     {
-        $pizza = App::$db->getRowById('pizzas', $row['pizza_id']);
+        $comment = App::$db->getRowById('comments', $row['pizza_id']);
 
         return $row = [
             'id' => $id,
             'status' => $row['status'],
-            'name' => $pizza['name'],
+            'name' => $comment['name'],
             'timestamp' => $this->timeFormat($row),
             'buttons' => [
                 'edit' => 'Edit'

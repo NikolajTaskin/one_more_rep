@@ -21,9 +21,9 @@ class PizzaApiController extends AdminController
         $form = new PizzaCreateForm();
 
         if ($form->validate()) {
-            $pizza = $form->values();
-            $pizza['id'] = App::$db->insertRow('pizzas', $form->values());
-            $response->setData($pizza);
+            $comment = $form->values();
+            $comment['id'] = App::$db->insertRow('comments', $form->values());
+            $response->setData($comment);
         } else {
             $response->setErrors($form->getErrors());
         }
@@ -43,11 +43,11 @@ class PizzaApiController extends AdminController
         if ($id === null) {
             $response->appendError('ApiController could not update, since ID is not provided! Check JS!');
         } else {
-            $pizza = App::$db->getRowById('pizzas', $id);
-            $pizza['id'] = $id;
+            $comment = App::$db->getRowById('comments', $id);
+            $comment['id'] = $id;
 
             // Setting "what" to json-encode
-            $response->setData($pizza);
+            $response->setData($comment);
         }
 
         // Returns json-encoded response
@@ -74,14 +74,14 @@ class PizzaApiController extends AdminController
             $form = new PizzaUpdateForm();
 
             if ($form->validate()) {
-                App::$db->updateRow('pizzas', $id, $form->values());
+                App::$db->updateRow('comments', $id, $form->values());
 
-                $pizza = $form->values();
-                $pizza['id'] = $id;
-                $pizza['buttons']['delete'] = 'Delete';
-                $pizza['buttons']['edit'] = 'Edit';
+                $comment = $form->values();
+                $comment['id'] = $id;
+                $comment['buttons']['delete'] = 'Delete';
+                $comment['buttons']['edit'] = 'Edit';
 
-                $response->setData($pizza);
+                $response->setData($comment);
             } else {
                 $response->setErrors($form->getErrors());
             }
@@ -105,7 +105,7 @@ class PizzaApiController extends AdminController
             $response->setData([
                 'id' => $id
             ]);
-            App::$db->deleteRow('pizzas', $id);
+            App::$db->deleteRow('comments', $id);
         }
 
         // Returns json-encoded response

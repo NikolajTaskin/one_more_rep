@@ -17,5 +17,8 @@
 <main>
     <?php print $data['content']; ?>
 </main>
+<footer>
+    <span>© <?php print date('Y') ?>. Nikolaj Taskin, all rights reserved.</span>
+</footer>
 </body>
 </html>

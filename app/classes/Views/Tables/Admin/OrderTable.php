@@ -1,6 +1,4 @@
 <?php
-
-
 namespace App\Views\Tables\Admin;
 
 use App\Views\Table;

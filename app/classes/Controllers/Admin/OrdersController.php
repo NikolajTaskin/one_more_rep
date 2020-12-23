@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Admin;
 
-use App\Controllers\Base\AdminController;
+use App\Controllers\Base\CommentatorController;
 use App\Views\BasePage;
 use App\Views\Forms\Admin\Order\OrderUpdateForm;
 use App\Views\Tables\Admin\OrderTable;
@@ -13,7 +13,7 @@ use App\Views\Tables\Admin\OrderTable;
  * @package App\Controllers\Admin
  * @author  Dainius Vaičiulis   <denncath@gmail.com>
  */
-class OrdersController extends AdminController
+class OrdersController extends CommentatorController
 {
     protected BasePage $page;
 

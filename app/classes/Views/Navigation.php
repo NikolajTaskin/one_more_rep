@@ -15,7 +15,7 @@ class Navigation extends View
 
     public function generate()
     {
-        $nav = [App::$router::getUrl('index') => 'Komentarai'];
+        $nav = [App::$router::getUrl('index') => 'Atsiliepimai'];
 
         if (App::$session->getUser()) {
             if (App::$session->getUser()['role'] === 'admin') {

@@ -5,11 +5,11 @@ namespace App\Controllers\Admin\API;
 
 
 use App\App;
-use App\Controllers\Base\API\AdminController;
+use App\Controllers\Base\API\CommentatorController;
 use App\Views\Forms\Admin\Order\OrderUpdateForm;
 use Core\Api\Response;
 
-class OrdersApiController extends AdminController
+class OrdersApiController extends CommentatorController
 {
     public function index(): string
     {

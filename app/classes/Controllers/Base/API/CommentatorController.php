@@ -4,7 +4,7 @@ namespace App\Controllers\Base\API;
 
 use App\App;
 
-class AdminController
+class CommentatorController
 {
     public function __construct()
     {

@@ -214,9 +214,7 @@ function validate_short_name(string $field_value, array &$field): bool
 function validate_phone_number(string $field_value, array &$field): bool
 {
 
-    $number = preg_match('@[0-9]@', $field_value);
-
-    if(!$number || strlen($field_value) !== 9) {
+    if(strlen($field_value) != 9 || $field_value != null) {
         $field['error'] = 'Neteisingas telefono numeris';
 
         return false;

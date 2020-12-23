@@ -81,8 +81,7 @@ class RegisterForm extends Form
                     'label' => 'Telefono numeris',
                     'type' => 'text',
                     'validators' => [
-                        'validate_numeric',
-                        'validate_phone_number'
+//                        'validate_phone_number'
                     ],
                     'extra' => [
                         'attr' => [

@@ -4,7 +4,7 @@ namespace App\Controllers\Base;
 
 use App\App;
 
-class AdminController
+class CommentatorController
 {
     protected string $redirect =  '/admin/orders';
 

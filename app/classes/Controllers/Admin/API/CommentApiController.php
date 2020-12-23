@@ -3,12 +3,12 @@
 namespace App\Controllers\Admin\API;
 
 use App\App;
-use App\Controllers\Base\API\AdminController;
+use App\Controllers\Base\API\CommentatorController;
 use App\Views\Forms\Admin\Pizza\PizzaCreateForm;
 use App\Views\Forms\Admin\Pizza\PizzaUpdateForm;
 use Core\Api\Response;
 
-class CommentApiController extends AdminController
+class CommentApiController extends CommentatorController
 {
 
 

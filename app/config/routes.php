@@ -20,8 +20,8 @@ Router::add('admin_users', "/admin/users", \App\Controllers\Admin\UsersControlle
 Router::add('user_orders', '/my/orders', \App\Controllers\User\OrdersController::class);
 
 // API Routes
-Router::add('api_pizza_get', '/api/pizza/get', \App\Controllers\Common\API\PizzaApiController::class);
-Router::add('api_pizza_create', '/api/pizza/create', \App\Controllers\Admin\API\PizzaApiController::class, 'create');
+Router::add('api_pizza_get', '/api/pizza/get', \App\Controllers\Common\API\CommentApiController::class);
+Router::add('api_pizza_create', '/api/pizza/create', \App\Controllers\Admin\API\CommentApiController::class, 'create');
 
 Router::add('api_order_create', '/api/order/create', \App\Controllers\User\API\OrdersApiController::class, 'create');
 Router::add('api_user_order_get', '/api/order/user/get', \App\Controllers\User\API\OrdersApiController::class);

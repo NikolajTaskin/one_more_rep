@@ -8,7 +8,7 @@ use App\Views\Forms\Admin\Pizza\PizzaCreateForm;
 use App\Views\Forms\Admin\Pizza\PizzaUpdateForm;
 use Core\Api\Response;
 
-class PizzaApiController
+class CommentApiController
 {
 
     public function index(): string
